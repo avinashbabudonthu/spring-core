@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd" />
+    </bean>
+
+    <bean id="student1" class="setter.injection.Student">
+        <property name="id" value="1" />
+        <property name="name" value="jim" />
+        <property name="joiningDate">
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2019-24-09" />
+            </bean>
+        </property>
+        <property name="grade" value="3.12"/>
+    </bean>
+
+    <bean id="studentRepository" class="setter.injection.StudentRepositoryImpl">
+        <property name="student" ref="student1" />
+    </bean>
+    
+    <bean id="studentService" class="setter.injection.StudentServiceImpl">
+        <property name="studentRepository" ref="studentRepository" />
+    </bean>
+</beans>

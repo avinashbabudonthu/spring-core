@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'application'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = 'http://repo.maven.apache.org/maven2'
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile "org.projectlombok:lombok:1.18.8"
+}
+
+group = 'com.dependency.injection.xml'
+version = '1.0'
+description = 'dependency-injection-xml'
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
