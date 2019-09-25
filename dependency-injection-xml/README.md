@@ -23,4 +23,4 @@ gradle init --type pom
 * org.springframework:spring-context:5.1.9.RELEASE
 
 ## Examples
-* Autowire dependency inject byType
+* Autowire dependency inject byType. Refer package **autowire.by.type**
