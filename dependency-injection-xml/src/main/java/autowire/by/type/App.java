@@ -1,6 +1,4 @@
-package setter.injection;
-
-import java.util.List;
+package autowire.by.type;
 
 import org.junit.Test;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -12,12 +10,11 @@ import lombok.extern.slf4j.Slf4j;
 public class App {
 
 	@Test
-	public void setterInjection() {
+	public void run() {
 		try (AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-				"setter.injection/setter-injection.xml")) {
+				"autowire.by.type/application-context.xml")) {
 			StudentService studentService = applicationContext.getBean("studentService", StudentService.class);
-			List<Student> studentsList = studentService.findAllStudents();
-			log.info("students-list={}", studentsList);
+			log.info("student={}", studentService.findStudent());
 		}
 	}
 }
