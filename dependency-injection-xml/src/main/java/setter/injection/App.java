@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class App {
 
 	@Test
-	public void setterInjection() {
+	public void run() {
 		try (AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"setter.injection/setter-injection.xml")) {
 			StudentService studentService = applicationContext.getBean("studentService", StudentService.class);

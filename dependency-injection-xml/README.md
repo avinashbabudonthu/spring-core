@@ -23,4 +23,13 @@ gradle init --type pom
 * org.springframework:spring-context:5.1.9.RELEASE
 
 ## Examples
-* Autowire dependency inject byType. Refer package **autowire.by.type**
+* Autowire dependency injection byType - **autowire.by.type**
+* Autowire dependency injection by constructor - **autowire.constructor**
+* Constructor injection - **basic.constructor.injection**
+* Setter injection - **setter.injection**
+* Date injection - **date.injection**
+* Properties injection - **properties.injection**
+
+## Run this project
+* Import project into IDE as Maven or Gradle project
+* Execute App class in each package
