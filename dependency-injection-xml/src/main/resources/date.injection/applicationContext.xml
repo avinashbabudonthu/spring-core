@@ -31,7 +31,7 @@
 		</property>
 	</bean>
 	
-	<bean name="employee1" class="date.injection.Employee" p:id="1" p:name="jim" p:joiningDate="26-09-2019" />
+	<bean name="employee1" class="date.injection.Employee" p:id="1" p:name="jim" p:joiningDate="27-09-2019" />
 	
 	<bean name="employeeRepositoryImpl" class="date.injection.EmployeeRepositoryImpl" p:employee-ref="employee1" />
 	

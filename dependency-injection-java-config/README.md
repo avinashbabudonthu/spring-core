@@ -39,7 +39,7 @@ gradle init --type pom
 * Create configuration class - **AppConfig**
 * Declare **ComponentScan** annotation at class level of **AppConfig**. Give package
 * Test method - **component.scan.with.annotations.App**
-
+* Test class **component.scan.with.annotations.StudentServiceTest** by using **SpringJUnit4ClassRunner**, **@ContextConfiguration**
 
 ### Properties Injection
 * Inject values from properties file using spring java configuration
@@ -47,7 +47,7 @@ gradle init --type pom
 * Create **app.properties** file in **src/main/resources**
 * Declare **@PropertySource(value = "properties.injection/app.properties")** annotation in AppConfig
 * Create bean **PropertySourcesPlaceholderConfigurer** in **AppConfig**
-* Test class **StudentServiceTest** by using **SpringJUnit4ClassRunner**, **@ContextConfiguration** 
+ 
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
