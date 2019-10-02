@@ -11,8 +11,7 @@ public class StudentRepositoryImpl implements StudentRepository {
 		this.student = student;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 * 
 	 * @see autowire.constructor.StudentRepository#findStudent()
 	 */

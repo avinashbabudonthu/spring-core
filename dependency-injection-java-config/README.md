@@ -24,26 +24,31 @@ gradle init --type pom
 * org.springframework:spring-test:5.1.9.RELEASE
 
 ## Examples
-### Dependency injection using java config and setter
-* Basic setter injection using spring java configuration
+* [Setter Injection](#setter-injection)
+* [Using Annotations](#using-annotations)
+* [Properties Injection](#properties-injection)
+
+## Setter Injection
 * package - **dependency.inject.setter.injection**
+* Basic setter injection using spring java configuration
 * Create classes Student, StudentService, StudentRepository
 * Create configuration class - **AppConfig**
 * StudentRepository injected to StudentService
 * Get StudentService bean in App class using class - **AnnotationConfigApplicationContext** 
 
-### Using Annotations like @Service, @Repository with java config
-* Usage of annotation **ComponentScan** in make spring to scan all packages and sub packages
+## Using Annotations
 * package - **component.scan.with.annotations**
+* Annotations like @Service, @Repository with java config
+* Usage of annotation **ComponentScan** in make spring to scan all packages and sub packages
 * Create classes Student, StudentService, StudentRepository
 * Create configuration class - **AppConfig**
 * Declare **ComponentScan** annotation at class level of **AppConfig**. Give package
 * Test method - **component.scan.with.annotations.App**
 * Test class **component.scan.with.annotations.StudentServiceTest** by using **SpringJUnit4ClassRunner**, **@ContextConfiguration**
 
-### Properties Injection
-* Inject values from properties file using spring java configuration
+## Properties Injection
 * Package - **properties.injection**
+* Inject values from properties file using spring java configuration
 * Create **app.properties** file in **src/main/resources**
 * Declare **@PropertySource(value = "properties.injection/app.properties")** annotation in AppConfig
 * Create bean **PropertySourcesPlaceholderConfigurer** in **AppConfig**
