@@ -29,7 +29,7 @@ gradle init --type pom
 * [Properties Injection](#properties-injection)
 
 ## Setter Injection
-* package - **dependency.inject.setter.injection**
+* package - [dependency.inject.setter.injection](src/main/java/dependency/inject/setter/injection)
 * Basic setter injection using spring java configuration
 * Create classes Student, StudentService, StudentRepository
 * Create configuration class - **AppConfig**
@@ -37,7 +37,7 @@ gradle init --type pom
 * Get StudentService bean in App class using class - **AnnotationConfigApplicationContext** 
 
 ## Using Annotations
-* package - **component.scan.with.annotations**
+* package - [component.scan.with.annotations](src/main/java/component/scan/with/annotations)
 * Annotations like @Service, @Repository with java config
 * Usage of annotation **ComponentScan** in make spring to scan all packages and sub packages
 * Create classes Student, StudentService, StudentRepository
@@ -47,7 +47,7 @@ gradle init --type pom
 * Test class **component.scan.with.annotations.StudentServiceTest** by using **SpringJUnit4ClassRunner**, **@ContextConfiguration**
 
 ## Properties Injection
-* Package - **properties.injection**
+* Package - [properties.injection](src/main/java/properties/injection)
 * Inject values from properties file using spring java configuration
 * Create **app.properties** file in **src/main/resources**
 * Declare **@PropertySource(value = "properties.injection/app.properties")** annotation in AppConfig
