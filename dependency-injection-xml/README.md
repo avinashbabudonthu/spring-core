@@ -24,11 +24,11 @@ gradle init --type pom
 
 ## Examples
 * [Setter injection](src/main/java/setter/injection)
-* Constructor injection - **basic.constructor.injection**
-* Autowire dependency injection byType - **autowire.by.type**
-* Autowire dependency injection by constructor - **autowire.constructor**
-* Date injection - **date.injection**
-* Properties injection - **properties.injection**
+* [Constructor injection](src/main/java/basic/constructor/injection)
+* [Autowire dependency injection byType](src/main/java/autowire/by/type)
+* [Autowire dependency injection by constructor](src/main/java/autowire/constructor)
+* [Date injection](src/main/java/date/injection)
+* [Properties injection](src/main/java/properties/injection)
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
