@@ -23,7 +23,7 @@ gradle init --type pom
 * org.springframework:spring-context:5.1.9.RELEASE
 
 ## Examples
-* Setter injection - **setter.injection**
+* [Setter injection]((src/main/java/setter/injection))
 * Constructor injection - **basic.constructor.injection**
 * Autowire dependency injection byType - **autowire.by.type**
 * Autowire dependency injection by constructor - **autowire.constructor**
