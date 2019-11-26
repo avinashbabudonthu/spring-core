@@ -23,9 +23,9 @@ gradle init --type pom
 * org.springframework:spring-context:5.1.9.RELEASE
 
 ## Examples
-* Setter dependency injection - **dependency.injection.setter**
-* Constructor dependency injection - **dependency.injection.constructor**
-* Properties injection - **properties.injection**
+* [Setter dependency injection](src/main/java/dependency/injection/setter)
+* [Constructor dependency injection](src/main/java/dependency/injection/constructor)
+* [Properties injection](src/main/java/properties/injection)
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
