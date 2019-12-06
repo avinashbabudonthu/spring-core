@@ -1,4 +1,4 @@
-# Dependency Injection using Xml
+# Dependency Injection using Java Annotations
 
 ## Create project using maven
 ```
