@@ -23,12 +23,30 @@ gradle init --type pom
 * org.springframework:spring-context:5.1.9.RELEASE
 
 ## Examples
-* [Setter injection](src/main/java/setter/injection)
-* [Constructor injection](src/main/java/basic/constructor/injection)
+* [Setter Injection](#setter-injection)
+* [Constructor Injection](#constructor-injection)
 * [Autowire dependency injection byType](src/main/java/autowire/by/type)
 * [Autowire dependency injection by constructor](src/main/java/autowire/constructor)
 * [Date injection](src/main/java/date/injection)
 * [Properties injection](src/main/java/properties/injection)
+
+## Setter Injection
+* Create a package **setter.injection** in **src/main/java**
+* Create a folder **setter.injection** in **src/main/resources**
+* Create classes following classes **setter.injection** package. Refer classes **[here](src/main/java/setter/injection)**
+```
+Student.java
+StudentRepository.Java
+StudentRepositoryImpl.java
+StudentService.java
+StudentServiceImpl.java
+```
+* Inject **StudentRepository** to **StudentService**
+* Create spring config file **[setter-injection.xml](src/main/resources/setter.injection/setter-injection.xml
+)** in **src/main/resource/setter.injection** folder
+* Create and inject beans in **setter-injection.xml**
+* Get **StudentService** from spring bean config file using **ClassPathXmlApplicationContext**. Refer **[App.java](src/main/java/setter/injection/App.java)**
+
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
