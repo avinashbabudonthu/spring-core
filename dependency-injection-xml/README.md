@@ -9,7 +9,7 @@ mvn archetype:generate -DgroupId=com.dependency.injection.xml -DartifactId=depen
 ```
 gradle init --type pom
 ```
-* Refer [pom.xml](pom.xml) or [build.gradle](build.gradle] for dependencies
+* Refer [pom.xml](pom.xml) or [build.gradle](build.gradle) for dependencies
 
 ## Examples
 * [Setter Injection](#setter-injection)
