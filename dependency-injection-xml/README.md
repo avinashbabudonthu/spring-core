@@ -32,6 +32,9 @@ Tag to create spring bean
 ```
 <bean name="student1" class="setter.injection.Student" p:id="1" p:grade="3.24">
 ```
+```
+<property name="name" value="jill" />
+```
 * To inject value to property use **value** attribute of **property** tag
 ```
 <property name="name" value="jill" />
