@@ -1,26 +1,15 @@
-# Dependency Injection using Xml
+# Dependency Injection using XML
 
-## Create project using maven
+## Steps
+* Create project with maven
 ```
 mvn archetype:generate -DgroupId=com.dependency.injection.xml -DartifactId=dependency-injection-xml -Dversion=1.0 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
-
-## Add gradle
+* Add Gradle
 ```
 gradle init --type pom
 ```
-
-## Versions
-* Maven **3.5.2**
-* Gradle **5.0**
-
-## Dependencies
-* junit:junit:4.12
-* org.projectlombok:lombok:1.18.8
-* org.slf4j:slf4j-api:1.7.28
-* org.slf4j:slf4j-log4j12:1.7.28
-* org.springframework:spring-core:5.1.9.RELEASE
-* org.springframework:spring-context:5.1.9.RELEASE
+* Refer [pom.xml](pom.xml) or [build.gradle](build.gradle] for dependencies
 
 ## Examples
 * [Setter Injection](#setter-injection)
@@ -30,23 +19,32 @@ gradle init --type pom
 * [Date injection](src/main/java/date/injection)
 * [Properties injection](src/main/java/properties/injection)
 
-## Setter Injection
-* Create a package **setter.injection** in **src/main/java**
-* Create a folder **setter.injection** in **src/main/resources**
-* Create classes following classes **setter.injection** package. Refer classes **[here](src/main/java/setter/injection)**
+## Spring Config file
+* **beans** tag
 ```
-Student.java
-StudentRepository.Java
-StudentRepositoryImpl.java
-StudentService.java
-StudentServiceImpl.java
+Parent tag for all spring beans in spring config file
 ```
-* Inject **StudentRepository** to **StudentService**
-* Create spring config file **[setter-injection.xml](src/main/resources/setter.injection/setter-injection.xml
-)** in **src/main/resource/setter.injection** folder
-* Create and inject beans in **setter-injection.xml**
-* Get **StudentService** from spring bean config file using **ClassPathXmlApplicationContext**. Refer **[App.java](src/main/java/setter/injection/App.java)**
+* **bean** tag
+```
+Tag to create spring bean
+```
+* Inject property of bean class either with **p:[property-name]** or **property** tag
+* To inject value to property use **value** attribute of **property** tag
+```
+<property name="name" value="jill" />
+```
+* To inject one bean to another bean property use **ref** attribute of **property** tag
+```
+<property name="student" ref="student1" />
+```
 
+## Setter Injection
+* Refer class in package [src/main/java/setter/injection](src/main/java/setter/injection)
+* Create beans and do dependency injection in spring config file. Refer [src/main/resources/setter.injection/setter-injection.xml](src/main/resources/setter.injection/setter-injection.xml)
+* Create **Student** bean. Inject values
+* Create **StudentRepository** bean. Inject **Student** bean
+* Create **StudentService** bean. Inject **StudentRepository** bean
+* Get **StudentService** bean from spring config file using **ClassPathXmlApplicationContext**. Refer [src/main/java/setter/injection/App.java](src/main/java/setter/injection/App.java)
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
