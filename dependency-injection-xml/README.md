@@ -29,6 +29,9 @@ Parent tag for all spring beans in spring config file
 Tag to create spring bean
 ```
 * Inject property of bean class either with **p:[property-name]** or **property** tag
+```
+<bean name="student1" class="setter.injection.Student" p:id="1" p:grade="3.24">
+```
 * To inject value to property use **value** attribute of **property** tag
 ```
 <property name="name" value="jill" />
