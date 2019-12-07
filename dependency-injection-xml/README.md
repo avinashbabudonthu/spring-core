@@ -45,7 +45,7 @@ Tag to create spring bean
 ```
 
 ## Setter Injection
-* Refer class in package [src/main/java/setter/injection](src/main/java/setter/injection)
+* Refer classes in package [src/main/java/setter/injection](src/main/java/setter/injection)
 * Create beans and do dependency injection in spring config file. Refer [src/main/resources/setter.injection/setter-injection.xml](src/main/resources/setter.injection/setter-injection.xml)
 * Create **Student** bean. Inject values
 * Create **StudentRepository** bean. Inject **Student** bean
