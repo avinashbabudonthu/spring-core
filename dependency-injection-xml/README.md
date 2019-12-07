@@ -43,6 +43,10 @@ Tag to create spring bean
 ```
 <property name="student" ref="student1" />
 ```
+* **constructor-arg** to do dependency injection using constructor
+```
+<constructor-arg index="0" ref="student1" />
+```
 
 ## Setter Injection
 * Refer classes in package [src/main/java/setter/injection](src/main/java/setter/injection)
@@ -51,6 +55,17 @@ Tag to create spring bean
 * Create **StudentRepository** bean. Inject **Student** bean
 * Create **StudentService** bean. Inject **StudentRepository** bean
 * Get **StudentService** bean from spring config file using **ClassPathXmlApplicationContext**. Refer [src/main/java/setter/injection/App.java](src/main/java/setter/injection/App.java)
+
+## Constructor Injection
+* Refer classes in [src/main/java/basic/constructor/injection](src/main/java/basic/constructor/injection)
+* Create beans and do dependency injection in spring config file. Refer [src/main/resources/basic.constructor.injection/applicationContext.xml](src/main/resources/basic.constructor.injection/applicationContext.xml)
+* Create **Student** bean. Inject values 
+* Create **StudentRepository** bean. Inject **Student** bean using **constructor-arg** tag
+```
+<constructor-arg index="0" ref="student1" />
+```
+* Create **StudentService** bean. Inject **StudentRepository** bean using **constructor-arg** tag
+* Get **StudentService** bean from spring config file using **ClassPathXmlApplicationContext**. Refer [src/main/java/basic/constructor/injection/App.java](src/main/java/basic/constructor/injection/App.java)
 
 ## Run this project
 * Import project into IDE as Maven or Gradle project
