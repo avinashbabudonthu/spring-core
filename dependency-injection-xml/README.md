@@ -1,14 +1,15 @@
 # Dependency Injection using XML
 
-## Steps
-* Create project with maven
+## Create project
+### Maven command
 ```
 mvn archetype:generate -DgroupId=com.dependency.injection.xml -DartifactId=dependency-injection-xml -Dversion=1.0 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
-* Add Gradle
+### Add Gradle
 ```
 gradle init --type pom
 ```
+## Dependencies
 * Refer [pom.xml](pom.xml) or [build.gradle](build.gradle) for dependencies
 
 ## Examples
@@ -20,19 +21,11 @@ gradle init --type pom
 * [Properties injection](src/main/java/properties/injection)
 
 ## Spring Config file
-* **beans** tag
-```
-Parent tag for all spring beans in spring config file
-```
-* **bean** tag
-```
-Tag to create spring bean
-```
-* Inject property of bean class either with **p:[property-name]** or **property** tag
+* `beans` tag: Parent tag for all spring beans in spring config file
+* `bean` tag: Tag to create spring bean
+* Inject property of bean class either with `p:[property-name]` or `property` tag
 ```
 <bean name="student1" class="setter.injection.Student" p:id="1" p:grade="3.24">
-```
-```
 <property name="name" value="jill" />
 ```
 * To inject value to property use **value** attribute of **property** tag
@@ -43,7 +36,7 @@ Tag to create spring bean
 ```
 <property name="student" ref="student1" />
 ```
-* **constructor-arg** to do dependency injection using constructor
+* `constructor-arg` to do dependency injection using constructor
 ```
 <constructor-arg index="0" ref="student1" />
 ```
